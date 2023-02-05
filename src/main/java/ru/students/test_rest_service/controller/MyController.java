@@ -1,6 +1,5 @@
 package ru.students.test_rest_service.controller;
 
-
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -27,7 +26,6 @@ public class MyController {
     public ResponseEntity<Response> feedback(@RequestBody Request request) {
 
         log.warn("Входящий Request : " + String.valueOf(request));
-
         Response response = Response.builder()
                 .uid(request.getUid())
                 .operationUid(request.getOperationUid())
